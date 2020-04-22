@@ -1,7 +1,8 @@
 # -*- coding: UTF-8 -*-
 from zipfile import ZipFile
 import os
-from pathlib import Path
+import os.path
+from os import path
 
 #  [Done]将全能扫描王的压缩包*.zip解压
 #  按月份将所有文件，以月为单位存入Records目录
@@ -21,14 +22,18 @@ def moveFiles():
 
     for fileName in sourceFileList:
         fileInMonth = fileName.split(".")[0].split("_")[1]
-        targetMonth = Path(localPath).parent.joinpath("/Records/" + fileInMonth)
-        print(targetMonth)
-        # print(Path.is_dir(str(Path(localPath).parent)))
-        # if Path.exists(str(Path(localPath).parent) + "/Records/" + fileInMonth):
-        #     print("file in Month exists")
-        # else:
-        #     print("Need create folder")
+        targetFolder = localPath + "/Records/" + fileInMonth
+        confirmFolderExist(targetFolder)
+        
 
-            
+
+def confirmFolderExist(filePath):
+    if path.isdir(filePath):
+        print("Exist folder")
+        pass
+    else:
+        print("Folder not exist,Create it.")
+        os.mkdir(filePath) 
+
 unzip(zipFilePath)
 moveFiles()
