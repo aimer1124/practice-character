@@ -22,17 +22,18 @@ def moveFiles():
 
     for fileName in sourceFileList:
         fileInMonth = fileName.split(".")[0].split("_")[1]
+
+        # Check the folder exists
         targetFolder = localPath + "/Records/" + fileInMonth
         confirmFolderExist(targetFolder)
-        
 
+        # move record to Records folder
+        os.replace(localPath + "/练字/" + fileName, targetFolder + "/" + fileName)
 
 def confirmFolderExist(filePath):
     if path.isdir(filePath):
-        print("Exist folder")
         pass
     else:
-        print("Folder not exist,Create it.")
         os.mkdir(filePath) 
 
 unzip(zipFilePath)
