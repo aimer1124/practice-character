@@ -30,6 +30,17 @@ def moveFiles():
         # move record to Records folder
         os.replace(localPath + "/练字/" + fileName, targetFolder + "/" + fileName)
 
+        # write Record to README
+        confirmREADMEExist(targetFolder)
+
+def confirmREADMEExist(filePath):
+    fileName = filePath + "/README.md"
+    if path.isfile(fileName):
+        pass
+    else:
+        readME = open(fileName,"w")
+        readME.close()
+
 def confirmFolderExist(filePath):
     if path.isdir(filePath):
         pass
