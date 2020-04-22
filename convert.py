@@ -18,9 +18,12 @@ def unzip(filePath):
         zipObj.extractall()
 
 def moveFiles():
+    # Delete README files first.
+    deleteREADME()
+    
     sourceFileList = os.listdir(localPath + "/练字")
 
-    for fileName in sourceFileList:
+    for fileName in sorted(sourceFileList,key=str.lower):
         fileInMonth = fileName.split(".")[0].split("_")[1]
 
         # Check the folder exists
@@ -32,6 +35,18 @@ def moveFiles():
 
         # write Record to README
         confirmREADMEExist(targetFolder)
+        readME = open(targetFolder + "/README.md", "a+")
+        readME.writelines("![" + fileName + "](" + fileName + ")\r\n")
+        readME.close()
+
+# Delete README
+def deleteREADME():
+    recordsMonth = os.listdir(localPath + "/Records/")
+    for month in recordsMonth:
+        readMEFilePath = localPath + "/Records/" + month + "/README.md"
+        print("ReadME is " + readMEFilePath)
+        if path.isfile(readMEFilePath):
+            os.remove(readMEFilePath)
 
 def confirmREADMEExist(filePath):
     fileName = filePath + "/README.md"
@@ -40,6 +55,7 @@ def confirmREADMEExist(filePath):
     else:
         readME = open(fileName,"w")
         readME.close()
+    
 
 def confirmFolderExist(filePath):
     if path.isdir(filePath):
