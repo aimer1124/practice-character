@@ -3,10 +3,23 @@
 
 ## TOC
 
-- [目标](#目标)
-- [202003临摹](#202003临摹)
-- [202004临贴](#202004临贴)
-- [202005临贴](#202005临贴)
+- [practice-character](#practice-character)
+  - [TOC](#toc)
+  - [目标](#目标)
+  - [工具](#工具)
+  - [资料](#资料)
+  - [202003临摹](#202003临摹)
+      - [Action](#action)
+      - [Summary](#summary)
+      - [Records](#records)
+  - [202004临贴](#202004临贴)
+      - [Action](#action-1)
+      - [Records](#records-1)
+  - [202005临贴](#202005临贴)
+      - [Action](#action-2)
+      - [Records](#records-2)
+  - [202007临贴](#202007临贴)
+      - [Records](#records-3)
 
 ## 目标
 
@@ -23,6 +36,13 @@
 - [X] 将`全能扫描王`的压缩包`*.zip`解压
 - [X] 按`月份`将所有文件，以`月`为单位存入`Records`目录
 - [X] 在`Records`中的`月份`文件夹中，同步`README.md`文件内容
+
+## 资料
+
+- [笔的选择](https://www.bilibili.com/video/BV1Bt411o7c8)
+- [执笔](https://www.bilibili.com/video/BV1cW411m74u)
+- [字体/字贴/视频](./resource/.)
+
 
 ## 202003临摹
 
@@ -69,3 +89,16 @@
 
 - [5月记录](./Records/5/README.md)
 - [字体/字贴/视频](./resource/.)
+
+## 202007临贴
+
+整个6月没有练字，主要是老大开学了，平时早上帮老大收拾完之后，老二就起床了。早上在家没有时间练习了。
+
+当然，上面这条也是一种`借口`～
+
+- 07.10，发现还是基本的横竖撇捺写不好，这部分后面要加强，不要急于写字
+
+
+#### Records
+
+- [7月记录](./Records/7/README.md)
